@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>간호 영어 단어장</title>
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fffcea;--card:#fff;--ink:#35494a;--sub:#7b9193;--mint:#8fdcc4;--mint-d:#3fae93;--pink:#ffc6d5;--pink-d:#e0678b;--sky:#cfe7ff;--line:#dcefe9;--ok:#3fae93;--bad:#e0678b;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2e2a14;--card:#223230;--ink:#e6f3ef;--sub:#93b0aa;--mint:#2f6b5d;--mint-d:#7fdcc0;--pink:#5a3040;--pink-d:#ff9fba;--sky:#26405a;--line:#2f4642}}
+:root[data-theme="dark"]{--bg:#2e2a14;--card:#223230;--ink:#e6f3ef;--sub:#93b0aa;--mint:#2f6b5d;--mint-d:#7fdcc0;--pink:#5a3040;--pink-d:#ff9fba;--sky:#26405a;--line:#2f4642}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Jua','Apple SD Gothic Neo','Malgun Gothic',sans-serif;font-size:16px;line-height:1.5;padding-bottom:84px}
+.wrap{max-width:560px;margin:0 auto;padding:16px}
+header{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.logo{width:52px;height:52px;border-radius:18px;background:var(--pink);display:grid;place-items:center;font-size:28px;transform:rotate(-6deg)}
+h1{font-size:24px;margin:0;font-weight:400}
+header p{margin:0;color:var(--sub);font-size:14px}
+.view{display:none}.view.on{display:block}
+.bar{display:flex;gap:8px;margin-bottom:10px}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--card);border:2px solid var(--line);border-radius:14px;padding:10px 14px;width:100%;outline:none}
+input:focus,select:focus,textarea:focus,button:focus-visible{border-color:var(--mint-d);outline:2px solid var(--mint-d);outline-offset:2px}
+button{font:inherit;cursor:pointer;border:0;border-radius:14px;padding:10px 16px;background:var(--mint);color:var(--ink)}
+button.pink{background:var(--pink);color:var(--ink)}
+button.ghost{background:var(--card);border:2px solid var(--line)}
+.chips{display:flex;gap:6px;overflow-x:auto;padding-bottom:8px;margin-bottom:6px}
+.chip{flex:none;padding:6px 14px;border-radius:99px;background:var(--card);border:2px solid var(--line);font-size:14px}
+.chip.on{background:var(--mint);border-color:var(--mint)}
+.count{color:var(--sub);font-size:14px;margin:0 2px 8px;display:flex;justify-content:space-between;align-items:center}
+.count button{padding:4px 12px;font-size:14px}
+.card{background:var(--card);border:2px solid var(--line);border-radius:20px;padding:14px 16px;margin-bottom:10px;display:flex;gap:10px;align-items:center}
+.card{cursor:pointer;-webkit-tap-highlight-color:transparent;user-select:none}
+.card .t{flex:1;min-width:0}
+.en{font-size:19px;word-break:break-word}
+.ko{color:var(--mint-d);font-size:16px;cursor:pointer}
+.ko.hide~.desc{display:none}
+.desc{color:var(--sub);font-size:14px;margin-top:2px}
+textarea{resize:vertical;min-height:80px}
+.ko.hide{background:var(--line);color:transparent;border-radius:8px;user-select:none;display:inline-block;min-width:90px}
+.tag{font-size:12px;background:var(--sky);padding:1px 9px;border-radius:99px;color:var(--ink);margin-left:6px;vertical-align:middle}
+.ic{padding:8px 10px;background:var(--bg);border:2px solid var(--line);border-radius:12px;line-height:1}
+.empty{text-align:center;color:var(--sub);padding:30px 0}
+label{display:block;margin:12px 2px 6px;color:var(--sub);font-size:14px}
+.panel{background:var(--card);border:2px solid var(--line);border-radius:22px;padding:18px}
+.panel>button{width:100%;margin-top:16px;padding:12px}
+.q{text-align:center;padding:10px 0 4px}
+.q .n{color:var(--sub);font-size:14px}
+.q .w{font-size:30px;margin:8px 0 14px;word-break:break-word}
+.prog{height:10px;background:var(--line);border-radius:99px;overflow:hidden;margin:6px 0 10px}
+.prog i{display:block;height:100%;background:var(--mint-d);width:0;transition:width .3s}
+.opt{display:block;width:100%;text-align:left;margin-bottom:8px;padding:13px 16px;background:var(--card);border:2px solid var(--line)}
+.opt.ok{background:var(--mint);border-color:var(--mint-d)}
+.opt.bad{background:var(--pink);border-color:var(--pink-d)}
+.res{text-align:center}
+.res .big{font-size:56px;margin:4px 0}
+.res .sc{font-size:26px}
+.wrong{text-align:left;margin-top:14px;font-size:15px}
+.wrong div{padding:6px 0;border-top:2px dashed var(--line)}
+nav{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:2px solid var(--line);display:flex;justify-content:center;padding:8px 12px calc(8px + env(safe-area-inset-bottom,0px));gap:8px}
+nav button{flex:1;max-width:170px;background:transparent;display:flex;flex-direction:column;align-items:center;gap:0;font-size:14px;padding:6px}
+nav button span{font-size:22px;line-height:1.2}
+nav button.on{background:var(--mint)}
+#toast{position:fixed;left:50%;bottom:100px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:99px;opacity:0;pointer-events:none;transition:opacity .25s;font-size:15px}
+#toast.show{opacity:1}
+@media (prefers-reduced-motion:reduce){.prog i,#toast{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><div class="logo">🩺</div><div><h1>간호 영어 단어장</h1><p>매일 조금씩, 영어랑 친해져요</p></div></header>
+
+<section id="v-list" class="view on">
+  <div class="bar"><input id="search" type="search" placeholder="영어 또는 한글로 검색" aria-label="단어 검색"></div>
+  <div class="chips" id="chips"></div>
+  <div class="count"><span id="cnt"></span><span style="display:flex;gap:6px"><button class="ghost" id="orderBtn">🔀 순서 섞기</button><button class="ghost" id="hideBtn">뜻 가리기</button></span></div>
+  <div id="list"></div>
+</section>
+
+<section id="v-quiz" class="view">
+  <div id="quizStart" class="panel">
+    <div class="res"><div class="big">🧠</div><div class="sc">퀴즈로 복습해요</div><p style="color:var(--sub)">10문제 · 4지선다</p></div>
+    <label>문제 유형</label>
+    <select id="mode"><option value="en">영어 → 한글 뜻 고르기</option><option value="ko">한글 → 영어 단어 고르기</option></select>
+    <p id="best" style="color:var(--sub);font-size:14px;margin:12px 2px 0"></p>
+    <button id="startBtn">시작하기</button>
+  </div>
+  <div id="quizRun" class="panel" style="display:none">
+    <div class="n" style="color:var(--sub);font-size:14px" id="qn"></div>
+    <div class="prog"><i id="bar"></i></div>
+    <div class="q"><div class="w" id="qw"></div></div>
+    <div id="opts"></div>
+    <button id="nextBtn" class="pink" style="display:none">다음 문제</button>
+  </div>
+  <div id="quizEnd" class="panel res" style="display:none"></div>
+</section>
+
+<section id="v-add" class="view">
+  <div class="panel">
+    <div class="res"><div class="big">✏️</div><div class="sc">내 단어 추가</div></div>
+    <label for="aEn">영어 단어</label>
+    <input id="aEn" placeholder="예: Auscultation" autocomplete="off">
+    <label for="aKo">한글 설명</label>
+    <input id="aKo" placeholder="예: 청진" autocomplete="off">
+    <label for="aDesc">설명 (선택)</label>
+    <textarea id="aDesc" placeholder="예: 청진기로 몸속 소리를 듣고 상태를 확인하는 것"></textarea>
+    <label for="aCat">분류 (직접 입력하거나 목록에서 선택)</label>
+    <input id="aCat" list="catList" placeholder="예: 소아간호" autocomplete="off">
+    <datalist id="catList"></datalist>
+    <button id="addBtn">단어 저장하기</button>
+  </div>
+  <p class="count" style="margin-top:14px">내가 추가한 단어는 이 기기에 저장돼요. 목록에서 ✕ 버튼으로 삭제할 수 있어요.</p>
+</section>
+</div>
+
+<nav>
+  <button data-v="list" class="on"><span>📖</span>단어장</button>
+  <button data-v="quiz"><span>🎯</span>퀴즈</button>
+  <button data-v="add"><span>➕</span>추가</button>
+</nav>
+<div id="toast" role="status"></div>
+
+<script>
+const CATS=['사정·활력징후','증상','투약·처치','병원·간호'];
+const DESC={"Vital signs":"체온·맥박·호흡·혈압처럼 몸의 기본 상태를 보여주는 지표","Blood pressure":"혈액이 혈관 벽에 가하는 압력, 수축기/이완기로 표기","Pulse":"심장 박동이 동맥에 전해져 느껴지는 박동, 성인 정상 60~100회/분","Respiration":"숨을 들이쉬고 내쉬는 과정, 성인 정상 12~20회/분","Body temperature":"몸의 열 정도, 성인 정상 약 36.5℃","Oxygen saturation":"혈액 속 헤모글로빈의 산소 결합 비율(SpO₂), 보통 95% 이상","Pain assessment":"통증의 위치·정도·양상을 확인하는 것","Assessment":"간호과정의 첫 단계, 정보를 모아 환자 상태를 파악","Diagnosis":"환자의 건강 문제를 판단해 이름 붙이는 것","Evaluation":"간호 중재가 목표에 도달했는지 확인하는 단계","Hypertension":"혈압이 지속적으로 정상보다 높은 상태","Hypotension":"혈압이 정상보다 낮은 상태, 어지러움이 생길 수 있음","Tachycardia":"맥박이 빠른 상태, 성인 100회/분 초과","Bradycardia":"맥박이 느린 상태, 성인 60회/분 미만","Dyspnea":"숨쉬기 힘들다고 느끼는 증상","Edema":"조직 사이에 체액이 고여 붓는 증상","Fever":"체온이 정상보다 올라간 상태","Nausea":"토할 것 같은 불쾌한 느낌","Vomiting":"위 내용물이 입으로 나오는 것","Diarrhea":"묽은 변을 자주 보는 증상","Constipation":"배변이 어렵거나 횟수가 줄어든 상태","Dehydration":"몸의 수분이 부족한 상태","Injection":"약물을 주사기로 몸속에 넣는 것","Intravenous (IV)":"정맥으로 수액이나 약물을 직접 넣는 방법","Catheter":"체내에 넣어 액체를 넣거나 빼내는 가느다란 관","Medication":"치료·예방을 위해 환자에게 주는 약","Dosage":"한 번에 주는 약의 양과 횟수","Side effect":"약물이 일으키는 원하지 않는 작용","Allergy":"특정 물질에 몸이 과민하게 반응하는 것","Dressing":"상처를 보호하고 낫도록 돕는 덮개, 또는 그 처치","Wound":"피부나 조직이 손상된 부위","Intervention":"간호 목표를 이루기 위해 하는 간호 활동","Aseptic technique":"미생물이 들어가지 않도록 하는 처치 방법","Hand hygiene":"손씻기·손소독제로 감염 전파를 막는 가장 기본적인 방법","Infection control":"병원 안에서 감염이 퍼지지 않도록 막는 활동","Fall prevention":"환자가 넘어져 다치지 않도록 예방하는 간호","Bedsore":"오래 눌린 부위의 피부·조직이 손상되는 것(= pressure ulcer)","Informed consent":"충분한 설명을 듣고 환자가 스스로 동의하는 것","Admission":"치료를 위해 환자가 병원에 들어오는 것","Discharge":"치료를 마치고 환자가 병원을 떠나는 것"};
+const BASE=[
+['Vital signs','활력징후(체온·맥박·호흡·혈압)',0],['Blood pressure','혈압',0],['Pulse','맥박',0],['Respiration','호흡',0],['Body temperature','체온',0],
+['Oxygen saturation','산소포화도',0],['Pain assessment','통증 사정',0],['Assessment','사정(환자 상태 파악)',0],['Diagnosis','진단',0],['Evaluation','평가',0],
+['Hypertension','고혈압',1],['Hypotension','저혈압',1],['Tachycardia','빈맥',1],['Bradycardia','서맥',1],['Dyspnea','호흡곤란',1],
+['Edema','부종',1],['Fever','발열',1],['Nausea','오심(메스꺼움)',1],['Vomiting','구토',1],['Diarrhea','설사',1],['Constipation','변비',1],['Dehydration','탈수',1],
+['Injection','주사',2],['Intravenous (IV)','정맥 내 주입',2],['Catheter','카테터(관)',2],['Medication','투약, 약물',2],['Dosage','용량',2],['Side effect','부작용',2],['Allergy','알레르기',2],['Dressing','드레싱(상처 처치)',2],['Wound','상처',2],
+['Intervention','중재(간호 활동)',3],['Aseptic technique','무균술',3],['Hand hygiene','손 위생',3],['Infection control','감염 관리',3],['Fall prevention','낙상 예방',3],['Bedsore','욕창',3],['Informed consent','동의서(설명 후 동의)',3],['Admission','입원',3],['Discharge','퇴원',3]
+].map(a=>({en:a[0],ko:a[1],cat:CATS[a[2]],desc:DESC[a[0]]||'',base:true}));
+
+let custom=[],best=0,cat='',hidden=false,shuf=false,rank={};
+try{custom=JSON.parse(localStorage.getItem('nv_custom')||'[]');best=+localStorage.getItem('nv_best')||0}catch(e){}
+custom.forEach(w=>{if(typeof w.cat==='number')w.cat=CATS[w.cat]||'기타'});
+const save=()=>{try{localStorage.setItem('nv_custom',JSON.stringify(custom))}catch(e){}};
+const all=()=>BASE.concat(custom);
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function toast(m){const t=$('toast');t.textContent=m;t.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove('show'),1800)}
+
+/* tabs */
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('on',x===b));
+  document.querySelectorAll('.view').forEach(v=>v.classList.toggle('on',v.id==='v-'+b.dataset.v));
+  window.scrollTo(0,0);
+});
+
+/* list */
+function chips(){
+  const names=[...new Set(all().map(w=>w.cat))];
+  if(cat&&!names.includes(cat))cat='';
+  $('chips').innerHTML=['전체'].concat(names).map((n,i)=>`<button class="chip${(i?cat===n:!cat)?' on':''}" data-c="${i?esc(n):''}">${esc(n)}</button>`).join('');
+  $('chips').querySelectorAll('button').forEach(b=>b.onclick=()=>{cat=b.dataset.c;chips();render()});
+  $('catList').innerHTML=names.map(n=>`<option value="${esc(n)}">`).join('');
+}
+function render(){
+  const q=$('search').value.trim().toLowerCase();
+  const items=all().map((w,i)=>({w,i})).filter(({w})=>(!cat||w.cat===cat)&&(!q||w.en.toLowerCase().includes(q)||w.ko.toLowerCase().includes(q)||(w.desc||'').toLowerCase().includes(q)));
+  if(shuf)items.sort((a,b)=>(rank[a.i]??(rank[a.i]=Math.random()))-(rank[b.i]??(rank[b.i]=Math.random())));
+  $('cnt').textContent=`단어 ${items.length}개`;
+  $('hideBtn').textContent=hidden?'뜻 보이기':'뜻 가리기';
+  $('list').innerHTML=items.length?items.map(({w,i})=>`<div class="card"><div class="t"><div class="en">${esc(w.en)}<span class="tag">${esc(w.cat)}</span></div><span class="ko${hidden?' hide':''}">${esc(w.ko)}</span>${w.desc?`<div class="desc">${esc(w.desc)}</div>`:''}</div><button class="ic" data-s="${i}" aria-label="발음 듣기">🔊</button>${w.base?'':`<button class="ic" data-d="${i-BASE.length}" aria-label="삭제">✕</button>`}</div>`).join(''):'<div class="empty">찾는 단어가 없어요 🐣<br>추가 탭에서 직접 넣어 보세요!</div>';
+}
+$('list').onclick=e=>{
+  const t=e.target.closest('[data-s],[data-d]');
+  if(t){
+    if(t.dataset.s!==undefined)speak(all()[+t.dataset.s].en);
+    else{custom.splice(+t.dataset.d,1);save();chips();render();toast('단어를 삭제했어요')}
+    return;
+  }
+  const c=e.target.closest('.card');
+  if(c){const k=c.querySelector('.ko');k.classList.toggle('hide')}
+};
+function speak(s){try{const u=new SpeechSynthesisUtterance(s);u.lang='en-US';u.rate=.85;speechSynthesis.cancel();speechSynthesis.speak(u)}catch(e){toast('이 기기는 발음 듣기를 지원하지 않아요')}}
+$('search').oninput=render;
+$('orderBtn').onclick=()=>{shuf=true;rank={};render();window.scrollTo(0,0)};
+$('hideBtn').onclick=()=>{hidden=!hidden;render()};
+
+/* add */
+$('addBtn').onclick=()=>{
+  const en=$('aEn').value.trim(),ko=$('aKo').value.trim();
+  if(!en||!ko){toast('영어 단어와 한글 설명을 모두 입력해 주세요');return}
+  if(all().some(w=>w.en.toLowerCase()===en.toLowerCase())){toast('이미 있는 단어예요');return}
+  custom.push({en,ko,cat:$('aCat').value.trim()||'기타',desc:$('aDesc').value.trim()});save();
+  $('aEn').value='';$('aKo').value='';$('aDesc').value='';chips();render();toast('단어를 저장했어요');$('aEn').focus();
+};
+
+/* quiz */
+let Q=[],qi=0,score=0,wrong=[],mode='en';
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+function showQ(id){['quizStart','quizRun','quizEnd'].forEach(x=>$(x).style.display=x===id?'block':'none')}
+function bestTxt(){$('best').textContent=best?`최고 점수: ${best}점`:'아직 기록이 없어요. 첫 도전!'}
+$('startBtn').onclick=()=>{
+  mode=$('mode').value;Q=shuffle(all()).slice(0,10);qi=0;score=0;wrong=[];showQ('quizRun');ask();
+};
+function ask(){
+  const w=Q[qi],pool=shuffle(all().filter(x=>x!==w)).slice(0,3);
+  const opts=shuffle(pool.concat(w));
+  $('qn').textContent=`${qi+1} / ${Q.length}`;$('bar').style.width=(qi/Q.length*100)+'%';
+  $('qw').textContent=mode==='en'?w.en:w.ko;
+  $('opts').innerHTML=opts.map((o,i)=>`<button class="opt" data-i="${i}">${esc(mode==='en'?o.ko:o.en)}</button>`).join('');
+  $('opts').querySelectorAll('.opt').forEach((b,i)=>b.onclick=()=>pick(b,opts[i],w));
+  $('nextBtn').style.display='none';
+}
+function pick(btn,o,w){
+  const bs=$('opts').querySelectorAll('.opt');
+  if(bs[0].disabled)return;
+  const ok=o===w;
+  if(ok)score++;else wrong.push(w);
+  bs.forEach(b=>{b.disabled=true;if(b.textContent===(mode==='en'?w.ko:w.en))b.classList.add('ok')});
+  if(!ok)btn.classList.add('bad');
+  $('nextBtn').textContent=qi+1===Q.length?'결과 보기':'다음 문제';$('nextBtn').style.display='block';
+}
+$('nextBtn').onclick=()=>{qi++;qi<Q.length?ask():finish()};
+function finish(){
+  const pts=Math.round(score/Q.length*100);
+  if(pts>best){best=pts;try{localStorage.setItem('nv_best',best)}catch(e){}}
+  const emo=pts>=80?'🎉':pts>=50?'😊':'💪';
+  $('quizEnd').innerHTML=`<div class="big">${emo}</div><div class="sc">${score} / ${Q.length} 정답 (${pts}점)</div><p style="color:var(--sub)">${pts>=80?'대단해요! 실습 나가도 되겠어요':pts>=50?'좋아요, 조금만 더 복습해요':'괜찮아요, 단어장에서 다시 한 번 봐요'}</p>${wrong.length?`<div class="wrong"><b>틀린 단어</b>${wrong.map(w=>`<div>${esc(w.en)} · <span style="color:var(--mint-d)">${esc(w.ko)}</span></div>`).join('')}</div>`:''}<button id="again" style="margin-top:18px">다시 도전하기</button>`;
+  showQ('quizEnd');bestTxt();
+  $('again').onclick=()=>showQ('quizStart');
+}
+bestTxt();chips();render();
+</script>
+</body>
+</html>
